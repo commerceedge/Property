@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .title-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .title-container h1 {
+      cursor: pointer;
+      color: blue; /* Change the color as needed */
+    }
+    .video-container {
+      display: none;
+      text-align: center;
+    }
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+
+<div class="title-container" onclick="openVideo()">
+  <h1>Property bought in wife's name is family's</h1>
+</div>
+
+<div class="video-container" id="videoContainer" data-lightbox="video">
+  <a href="video/Property_bought_in_wifes_name_is_familys.mp4" data-lightbox="video" data-title="Property bought in wife's name is family's">
+    <video controls width="250" height="150">
+      <source src="video/Property_bought_in_wifes_name_is_familys.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script>
+  function openVideo() {
+    document.getElementById('videoContainer').style.display = 'block';
+    lightbox.show(0);
+  }
+</script>
+
+</body>
+</html>
